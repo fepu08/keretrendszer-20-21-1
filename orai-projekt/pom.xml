@@ -22,6 +22,7 @@
     </build>
     <modules>
         <module>core</module>
+        <module>service</module>
     </modules>
 
 </project>
