@@ -1,4 +1,4 @@
-package uni.eszterhazy.keretrendszer.exceptions;
+package keretrendszer.exceptions;
 
 public class RosszSzuletesiDatum extends Throwable {
     public RosszSzuletesiDatum(String s) {

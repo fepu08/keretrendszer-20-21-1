@@ -23,6 +23,7 @@
     <modules>
         <module>core</module>
         <module>service</module>
+        <module>util</module>
     </modules>
 
 </project>

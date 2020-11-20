@@ -1,9 +1,8 @@
-package uni.eszterhazy.keretrendszer.model;
+package keretrendszer.model;
 
-import jdk.vm.ci.meta.Local;
-import uni.eszterhazy.keretrendszer.exceptions.FizetesNegativ;
-import uni.eszterhazy.keretrendszer.exceptions.NevNemLehetUres;
-import uni.eszterhazy.keretrendszer.exceptions.RosszSzuletesiDatum;
+import keretrendszer.exceptions.FizetesNegativ;
+import keretrendszer.exceptions.NevNemLehetUres;
+import keretrendszer.exceptions.RosszSzuletesiDatum;
 
 import java.time.LocalDate;
 import java.util.List;

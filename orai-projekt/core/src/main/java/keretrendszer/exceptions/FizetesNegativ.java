@@ -1,4 +1,4 @@
-package uni.eszterhazy.keretrendszer.exceptions;
+package keretrendszer.exceptions;
 
 public class FizetesNegativ extends Throwable {
     public FizetesNegativ(double fizetes) {

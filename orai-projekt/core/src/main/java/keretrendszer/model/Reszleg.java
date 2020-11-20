@@ -1,4 +1,4 @@
-package uni.eszterhazy.keretrendszer.model;
+package keretrendszer.model;
 
 public enum Reszleg {
     HR, BESZERZES, LOGISZTIKA, KONYVELES, BERUGY
