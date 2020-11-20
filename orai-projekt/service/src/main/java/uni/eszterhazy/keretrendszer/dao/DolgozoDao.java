@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * Az adatbázisunk funkcionalitását írja le
  * */
-public interface dolgozoDao {
+public interface DolgozoDao {
     void createDolgozo(Dolgozo dolgozo);
     Collection<Dolgozo> readAllDolgozo();
     Dolgozo readDolgozo();

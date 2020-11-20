@@ -24,6 +24,7 @@
         <module>core</module>
         <module>service</module>
         <module>util</module>
+        <module>dao-relational</module>
     </modules>
 
 </project>
