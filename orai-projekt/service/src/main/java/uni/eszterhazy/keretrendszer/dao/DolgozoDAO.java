@@ -1,15 +1,15 @@
 package uni.eszterhazy.keretrendszer.dao;
 
 
-import keretrendszer.model.Dolgozo;
-import keretrendszer.model.Reszleg;
+import uni.eszterhazy.keretrendszer.model.Dolgozo;
+import uni.eszterhazy.keretrendszer.model.Reszleg;
 
 import java.util.Collection;
 
 /**
  * Az adatbázisunk funkcionalitását írja le
  * */
-public interface DolgozoDao {
+public interface DolgozoDAO {
     void createDolgozo(Dolgozo dolgozo);
     Collection<Dolgozo> readAllDolgozo();
     Dolgozo readDolgozo();

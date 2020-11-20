@@ -1,7 +1,7 @@
-package keretrendszer.service;
+package uni.eszterhazy.keretrendszer.service;
 
-import keretrendszer.model.Dolgozo;
-import keretrendszer.model.Reszleg;
+import uni.eszterhazy.keretrendszer.model.Dolgozo;
+import uni.eszterhazy.keretrendszer.model.Reszleg;
 
 import java.util.Collection;
 import java.util.Map;

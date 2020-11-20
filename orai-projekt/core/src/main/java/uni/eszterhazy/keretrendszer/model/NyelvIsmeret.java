@@ -1,4 +1,4 @@
-package keretrendszer.model;
+package uni.eszterhazy.keretrendszer.model;
 
 public class NyelvIsmeret {
     private String nyelv;
