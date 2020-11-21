@@ -36,4 +36,12 @@ public class NyelvIsmeret {
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "NyelvIsmeret{" +
+                "nyelv='" + nyelv + '\'' +
+                ", szint='" + szint + '\'' +
+                '}';
+    }
 }

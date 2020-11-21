@@ -12,7 +12,7 @@ import java.util.Collection;
 public interface DolgozoDAO {
     void createDolgozo(Dolgozo dolgozo);
     Collection<Dolgozo> readAllDolgozo();
-    Dolgozo readDolgozo();
+    Dolgozo readDolgozo(String id);
     void updateDolgozo(Dolgozo dolgozo);
     void deleteDolgozo(Dolgozo dolgozo);
     Collection<Dolgozo> readAllDolgozoOfReszleg(Reszleg reszleg);
