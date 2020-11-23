@@ -1,14 +1,14 @@
 package uni.eszterhazy.keretrendszer.model;
 
-public class Extras {
+public class Extra {
     private int id;
     private String name;
     private double price;
 
-    public Extras() {
+    public Extra() {
     }
 
-    public Extras(String name, double price) {
+    public Extra(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -35,5 +35,14 @@ public class Extras {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Extra{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }

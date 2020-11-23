@@ -12,6 +12,7 @@
         <module>core</module>
         <module>service</module>
         <module>util</module>
+        <module>dao_relational</module>
     </modules>
 
 

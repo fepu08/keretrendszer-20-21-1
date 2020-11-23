@@ -1,5 +1,5 @@
 package uni.eszterhazy.keretrendszer.model;
 
 public enum FuelType {
-    PETROL, DIESEL, HYBRID, ELECTRONIC
+    PETROL, DIESEL, HYBRID, ELECTRICAL
 }

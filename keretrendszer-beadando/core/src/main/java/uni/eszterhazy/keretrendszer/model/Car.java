@@ -16,7 +16,7 @@ public class Car {
     private LocalDate productionDate;
     private double price;
     private FuelType fuelType;
-    private List<Extras> extras;
+    private List<Extra> extras;
 
     public Car() {
         this.id = UUID.randomUUID().toString();
@@ -85,11 +85,11 @@ public class Car {
         this.fuelType = fuelType;
     }
 
-    public List<Extras> getExtras() {
+    public List<Extra> getExtras() {
         return extras;
     }
 
-    public void setExtras(List<Extras> extras) {
+    public void setExtras(List<Extra> extras) {
         this.extras = extras;
     }
 

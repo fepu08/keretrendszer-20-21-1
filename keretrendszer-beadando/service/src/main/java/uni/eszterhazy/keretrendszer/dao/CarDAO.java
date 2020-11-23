@@ -5,10 +5,10 @@ import uni.eszterhazy.keretrendszer.model.FuelType;
 
 import java.util.Collection;
 
-public interface carDAO {
+public interface CarDAO {
     void createCar(Car car);
     Collection<Car> readAllCar();
-    Car readCar();
+    Car readCar(String id);
     void updateCar(Car car);
     void deleteCar(Car car);
     Collection<Car> readAllCarByFuelType(FuelType fuelType);

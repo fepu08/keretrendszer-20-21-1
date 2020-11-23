@@ -1,0 +1,28 @@
+<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">
+    <class name="uni.eszterhazy.keretrendszer.model.Car" table="cars">
+        <id name="id" type="string" column="id"/>
+        <property name="model" type="string" column="model"/>
+        <property name="color" type="string" column="color"/>
+        <property name="productionDate" type="LocalDate" column="production_date"/>
+        <property name="price" type="double" column="price"/>
+        <property name="fuelType" column="fuel_type">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">uni.eszterhazy.keretrendszer.model.FuelType</param>
+                <param name="useNamed">true</param>
+            </type>
+        </property>
+        <list name="extras" cascade="all" fetch="join">
+            <key column="car" not-null="true"/>
+            <list-index column="idx"/>
+            <one-to-many class="uni.eszterhazy.keretrendszer.model.Extra"/>
+        </list>
+    </class>
+
+    <class name="uni.eszterhazy.keretrendszer.model.Extra" table="extras">
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="name" type="string" not-null="true"/>
+        <property name="price" type="double" not-null="true"/>
+    </class>
+</hibernate-mapping>
