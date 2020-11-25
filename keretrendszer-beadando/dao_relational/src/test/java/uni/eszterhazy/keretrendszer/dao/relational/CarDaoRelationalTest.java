@@ -2,10 +2,7 @@ package uni.eszterhazy.keretrendszer.dao.relational;
 
 import org.junit.Test;
 import uni.eszterhazy.keretrendszer.dao.CarDAO;
-import uni.eszterhazy.keretrendszer.exceptions.BadProductionDate;
-import uni.eszterhazy.keretrendszer.exceptions.ColorCannotBeEmpty;
-import uni.eszterhazy.keretrendszer.exceptions.ModelCannotBeEmpty;
-import uni.eszterhazy.keretrendszer.exceptions.PriceNegative;
+import uni.eszterhazy.keretrendszer.exceptions.*;
 import uni.eszterhazy.keretrendszer.model.Car;
 import uni.eszterhazy.keretrendszer.model.Extra;
 import uni.eszterhazy.keretrendszer.model.FuelType;
@@ -13,8 +10,6 @@ import uni.eszterhazy.keretrendszer.model.FuelType;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class CarDaoRelationalTest {
     @Test
@@ -38,6 +33,10 @@ public class CarDaoRelationalTest {
 
         //System.out.println(dao.readAllCar().toString());
         //System.out.println(dao.readAllCarByFuelType(FuelType.DIESEL));
-        System.out.println(dao.readCar("1e6788c0-bca6-4d8a-9225-58dce27119c2"));
+        try {
+            System.out.println(dao.readCar("1e6788c0-bca6-4d8a-9225-58dce27119c2"));
+        } catch (CarNotFound carNotFound) {
+            carNotFound.printStackTrace();
+        }
     }
 }

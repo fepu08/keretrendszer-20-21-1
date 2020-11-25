@@ -1,5 +1,6 @@
 package uni.eszterhazy.keretrendszer.model;
 
+import org.apache.log4j.Logger;
 import uni.eszterhazy.keretrendszer.exceptions.BadProductionDate;
 import uni.eszterhazy.keretrendszer.exceptions.ColorCannotBeEmpty;
 import uni.eszterhazy.keretrendszer.exceptions.ModelCannotBeEmpty;
@@ -18,8 +19,11 @@ public class Car {
     private FuelType fuelType;
     private List<Extra> extras;
 
+    Logger logger = Logger.getLogger(this.getClass());
+
     public Car() {
         this.id = UUID.randomUUID().toString();
+        logger.info("New car created with ID: " + this.id);
     }
 
     public String getId() {

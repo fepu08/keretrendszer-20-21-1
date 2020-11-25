@@ -29,9 +29,9 @@ public class DolgozoDAORelationalTest {
         nyelvek.add(ny1);
         //nyelvek.add(ny2);
         dolgozo.setNyelvIsmeret(nyelvek);
-        //dao.createDolgozo(dolgozo);
+        dao.createDolgozo(dolgozo);
         //System.out.println(dao.readAllDolgozoOfReszleg(Reszleg.BERUGY));
-        System.out.println(dao.readDolgozo("746b6d10-370b-4b89-ab66-17f175c215e2"));
+        //System.out.println(dao.readDolgozo("746b6d10-370b-4b89-ab66-17f175c215e2"));
     }
 
 }
