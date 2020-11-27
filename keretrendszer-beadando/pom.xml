@@ -15,6 +15,7 @@
         <module>dao_relational</module>
         <module>console</module>
         <module>dao_json</module>
+        <module>dao_mongo</module>
     </modules>
     <dependencies>
         <dependency>

@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class Car {
+    //TODO: if you have time add brand field
     private String id;
     private String model;
     private String color;
