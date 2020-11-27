@@ -1,7 +1,6 @@
 package uni.eszterhazy.keretrendszer.service.impl;
 
 import org.apache.log4j.Logger;
-import org.graalvm.compiler.lir.CompositeValue;
 import uni.eszterhazy.keretrendszer.dao.CarDAO;
 import uni.eszterhazy.keretrendszer.model.Car;
 import uni.eszterhazy.keretrendszer.model.FuelType;

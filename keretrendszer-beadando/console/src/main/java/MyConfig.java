@@ -1,5 +1,6 @@
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import uni.eszterhazy.keretrendszer.dao.CarDAO;
 import uni.eszterhazy.keretrendszer.dao.json.CarDAOJSON;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 
 @Configuration
+@ComponentScan("uni.eszterhazy.keretrendszer.controller")
 public class MyConfig {
     @Bean(name= "mongoDbDAO")
     public CarDAO carMongoDB(){
