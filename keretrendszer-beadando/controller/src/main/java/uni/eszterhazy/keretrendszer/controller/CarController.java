@@ -49,7 +49,6 @@ public class CarController {
 
     @GetMapping(value = "/car/{id}")
     public String getCarById(@PathVariable String id, Model model) throws CarNotFound {
-        //FIXME: LEHET HIBÁS LESZ!!!
         model.addAttribute("car", service.getCarById(id));
         return "cardetails.jsp";
     }
