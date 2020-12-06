@@ -73,7 +73,8 @@ public class CarDAOJSON implements CarDAO {
         //TODO
     }
 
-    public void deleteCar(Car car) {
+    @Override
+    public void deleteCar(String id) throws CarNotFound {
         //TODO
     }
 

@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 import uni.eszterhazy.keretrendszer.dao.CarDAO;
+import uni.eszterhazy.keretrendszer.exceptions.*;
 import uni.eszterhazy.keretrendszer.model.Car;
 import uni.eszterhazy.keretrendszer.model.FuelType;
 
@@ -38,12 +39,35 @@ public class CarDaoRelational implements CarDAO {
         return result;
     }
 
-    public void updateCar(Car car) {
-
+    public void updateCar(Car car) throws CarNotFound, ModelCannotBeEmpty, ColorCannotBeEmpty, BadProductionDate, PriceNegative {
+        Session session = factory.openSession();
+        if(session.get(Car.class, car.getId()) == null){
+            throw new CarNotFound(car.getId());
+        }
+        Transaction tx=session.beginTransaction();
+        Car object = session.get(Car.class,car.getId());
+        object.setId(car.getId());
+        object.setModel(car.getModel());
+        object.setColor(car.getColor());
+        object.setProductionDate(car.getProductionDate());
+        object.setFuelType(car.getFuelType());
+        object.setExtras(car.getExtras());
+        object.setPrice(car.getPrice());
+        session.update(object);
+        tx.commit();
+        session.close();
     }
 
-    public void deleteCar(Car car) {
-
+    public void deleteCar(String id) throws CarNotFound {
+        Session session = factory.openSession();
+        if(session.get(Car.class, id) == null){
+            throw new CarNotFound(id);
+        }
+        Transaction tx = session.beginTransaction();
+        Car obj = session.get( Car.class, id);
+        session.delete(obj);
+        tx.commit();
+        session.close();
     }
 
     public Collection<Car> readAllCarByFuelType(FuelType fuelType) {

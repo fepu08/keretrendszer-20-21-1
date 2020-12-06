@@ -57,7 +57,8 @@ public class CarDAOMongo implements CarDAO {
 
     }
 
-    public void deleteCar(Car car) {
+    @Override
+    public void deleteCar(String id) throws CarNotFound {
 
     }
 

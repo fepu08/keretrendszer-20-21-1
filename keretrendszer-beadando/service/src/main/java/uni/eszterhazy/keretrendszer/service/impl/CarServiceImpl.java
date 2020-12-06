@@ -2,11 +2,10 @@ package uni.eszterhazy.keretrendszer.service.impl;
 
 import org.apache.log4j.Logger;
 import uni.eszterhazy.keretrendszer.dao.CarDAO;
+import uni.eszterhazy.keretrendszer.exceptions.*;
 import uni.eszterhazy.keretrendszer.model.Car;
 import uni.eszterhazy.keretrendszer.model.FuelType;
 import uni.eszterhazy.keretrendszer.service.CarService;
-import uni.eszterhazy.keretrendszer.exceptions.CarAlreadyAdded;
-import uni.eszterhazy.keretrendszer.exceptions.CarNotFound;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -39,13 +38,13 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public void updateCar(Car car) {
+    public void updateCar(Car car) throws ModelCannotBeEmpty, PriceNegative, BadProductionDate, CarNotFound, ColorCannotBeEmpty {
         dao.updateCar(car);
     }
 
     @Override
-    public void removeCar(Car car) {
-        dao.deleteCar(car);
+    public void removeCar(String id) throws CarNotFound {
+        dao.deleteCar(id);
     }
 
     @Override
