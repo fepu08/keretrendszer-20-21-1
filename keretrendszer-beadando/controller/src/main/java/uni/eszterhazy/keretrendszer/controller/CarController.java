@@ -65,9 +65,7 @@ public class CarController {
         System.out.println(car);
         try {
             service.addCar(car);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (CarAlreadyAdded carAlreadyAdded) {
+        }  catch (CarAlreadyAdded carAlreadyAdded) {
             carAlreadyAdded.printStackTrace();
         }
         return "redirect:car/"+ car.getId();

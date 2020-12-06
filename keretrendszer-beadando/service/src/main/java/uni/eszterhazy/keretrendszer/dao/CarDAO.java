@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Collection;
 
 public interface CarDAO {
-    void createCar(Car car) throws IOException, CarAlreadyAdded;
+    void createCar(Car car) throws CarAlreadyAdded;
     Collection<Car> readAllCar();
     Car readCar(String id) throws CarNotFound;
     void updateCar(Car car);

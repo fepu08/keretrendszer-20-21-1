@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Map;
 
 public interface CarService {
-    void addCar(Car car) throws IOException, CarAlreadyAdded;
+    void addCar(Car car) throws CarAlreadyAdded;
     Collection<Car> getAllCar();
     Car getCarById(String id) throws CarNotFound;
     void updateCar(Car car);
