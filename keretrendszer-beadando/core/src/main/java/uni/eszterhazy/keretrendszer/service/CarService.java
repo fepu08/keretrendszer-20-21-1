@@ -12,7 +12,7 @@ import java.util.Map;
 public interface CarService {
     void addCar(Car car) throws IOException, CarAlreadyAdded;
     Collection<Car> getAllCar();
-    void getCarById(String id) throws CarNotFound;
+    Car getCarById(String id) throws CarNotFound;
     void updateCar(Car car);
     void removeCar(Car car);
     Collection<Car> getAllCarByFuelType(FuelType fuelType);

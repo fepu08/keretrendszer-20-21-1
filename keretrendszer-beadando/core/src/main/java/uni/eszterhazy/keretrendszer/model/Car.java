@@ -1,6 +1,7 @@
 package uni.eszterhazy.keretrendszer.model;
 
 import org.apache.log4j.Logger;
+import org.springframework.format.annotation.DateTimeFormat;
 import uni.eszterhazy.keretrendszer.exceptions.BadProductionDate;
 import uni.eszterhazy.keretrendszer.exceptions.ColorCannotBeEmpty;
 import uni.eszterhazy.keretrendszer.exceptions.ModelCannotBeEmpty;
@@ -15,6 +16,7 @@ public class Car {
     private String id;
     private String model;
     private String color;
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate productionDate;
     private double price;
     private FuelType fuelType;
@@ -61,7 +63,7 @@ public class Car {
         return productionDate;
     }
 
-    public void setProductionDate(LocalDate productionDate) throws BadProductionDate {
+    public void setProductionDate(@DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate productionDate) throws BadProductionDate {
         if(productionDate.isAfter(LocalDate.now())){
             throw new BadProductionDate("Future date");
         } else if (productionDate.isBefore(LocalDate.now().minusYears(20))) {

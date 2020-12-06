@@ -26,8 +26,14 @@ public class CarDAOMongo implements CarDAO {
         this.collection = db.getCollection(collection);
     }
 
-    public void createCar(Car car) throws IOException, CarAlreadyAdded {
-
+    public void createCar(Car car) throws CarAlreadyAdded{
+        try {
+            readCar(car.getId());
+        } catch (CarNotFound carNotFound) {
+            collection.insert(CarAdapter.CarToDBObject(car));
+            return;
+        }
+        throw new CarAlreadyAdded(car.getId());
     }
 
     public Collection<Car> readAllCar() {

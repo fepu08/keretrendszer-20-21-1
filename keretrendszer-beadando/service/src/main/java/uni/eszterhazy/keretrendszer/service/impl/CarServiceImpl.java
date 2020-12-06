@@ -30,8 +30,8 @@ public class CarServiceImpl implements CarService {
         return result;
     }
 
-    public void getCarById(String id) throws CarNotFound {
-        dao.readCar(id);
+    public Car getCarById(String id) throws CarNotFound {
+        return dao.readCar(id);
     }
 
     public void updateCar(Car car) {
